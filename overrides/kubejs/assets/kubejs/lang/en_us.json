@@ -3,5 +3,6 @@
   "item.kubejs.reinforced_porthole": "Reinforced Porthole",
   "item.kubejs.shipyard_avionics": "Shipyard Avionics",
   "item.kubejs.shielded_navigation_core": "Shielded Navigation Core",
-  "item.kubejs.interstellar_controller": "Interstellar Controller"
+  "item.kubejs.interstellar_controller": "Interstellar Controller",
+  "item.kubejs.lunar_circuit_board": "Lunar Circuit Substrate"
 }
