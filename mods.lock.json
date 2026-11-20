@@ -1,0 +1,82 @@
+{
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.267",
+  "java": 21,
+  "mods": [
+    {
+      "file": "ntm-decentralized-neoforge-1.21.1-1.0.0-beta.14-hotfix.jar",
+      "url": "https://edge.forgecdn.net/files/9456/010/ntm-decentralized-neoforge-1.21.1-1.0.0-beta.14-hotfix.jar",
+      "sha256": "f77883e1a33b80fdcc17b39f902700f8be26b65a117c3e800175e8655ff6ec72"
+    },
+    {
+      "file": "unbound-neoforge-1.21.1-0.16.1.jar",
+      "url": "https://edge.forgecdn.net/files/9697/687/unbound-neoforge-1.21.1-0.16.1.jar",
+      "sha256": "d935b42090a6b7d8c5bb9286e80705ce32bf55124bbbc3014bbf7e4456d5f9eb"
+    },
+    {
+      "file": "kubejs-neoforge-2101.7.2-build.381.jar",
+      "url": "https://edge.forgecdn.net/files/9396/059/kubejs-neoforge-2101.7.2-build.381.jar",
+      "sha256": "e4539156a6e93badf140d050306d2b4d7975037541b3c51f746cf78bf6fe14a2"
+    },
+    {
+      "file": "ftb-quests-neoforge-2101.1.39.jar",
+      "url": "https://edge.forgecdn.net/files/9650/792/ftb-quests-neoforge-2101.1.39.jar",
+      "sha256": "40f9bea7bb96e8129303b0dc1b9e47b38234f52018ff332f967be03df07a466e"
+    },
+    {
+      "file": "ftb-library-neoforge-2101.1.40.jar",
+      "url": "https://edge.forgecdn.net/files/9650/381/ftb-library-neoforge-2101.1.40.jar",
+      "sha256": "d97d8ae91b5049406f1bac5634ecbceafe7ff0f00e850047792deef4aec05d50"
+    },
+    {
+      "file": "ftb-teams-neoforge-2101.1.12.jar",
+      "url": "https://edge.forgecdn.net/files/9434/081/ftb-teams-neoforge-2101.1.12.jar",
+      "sha256": "b3f33436070b7ae4a706280561f1d2f1d1eb1a089cb13ec9851e99646165aed2"
+    },
+    {
+      "file": "jei-1.21.1-neoforge-19.64.0.455.jar",
+      "url": "https://edge.forgecdn.net/files/9205/121/jei-1.21.1-neoforge-19.64.0.455.jar",
+      "sha256": "f7a9de3d7ee07eed8d293a1a1a0f6afaac556eb43c103523457bd07ebb551e7b"
+    },
+    {
+      "file": "cc-tweaked-1.21.1-forge-1.122.0.jar",
+      "url": "https://cdn.modrinth.com/data/gu7yAYhd/versions/2jhB1Ii4/cc-tweaked-1.21.1-forge-1.122.0.jar",
+      "sha256": "d3b1153054d136dac1319c6d3c085865b7d174e40686aa1dc1f077d5485b8df0"
+    },
+    {
+      "file": "geckolib-neoforge-1.21.1-4.9.3.jar",
+      "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/Grwn5rUB/geckolib-neoforge-1.21.1-4.9.3.jar",
+      "sha256": "20a1995e4074f387ff549e2c57ea79dd7d41ee83c6afb9dd6a6e840e592d1c47"
+    },
+    {
+      "file": "architectury-13.0.12-neoforge.jar",
+      "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/xGfBrBzj/architectury-13.0.12-neoforge.jar",
+      "sha256": "aa558d884c9d35399bf5471e042d6be30c32e4a1cf0a5d06a4480ad49dba3ac0"
+    },
+    {
+      "file": "rhino-2101.2.8-build.91.jar",
+      "url": "https://cdn.modrinth.com/data/sk9knFPE/versions/SqkDvOLG/rhino-2101.2.8-build.91.jar",
+      "sha256": "1d53d962aa4dac54bcbb4f998c1845980cf194318f1d6b1580ea6ac15cce5ef3"
+    },
+    {
+      "file": "Jade-1.21.1-NeoForge-15.10.6.jar",
+      "url": "https://cdn.modrinth.com/data/nvQzSEkH/versions/eYz2YBGT/Jade-1.21.1-NeoForge-15.10.6.jar",
+      "sha256": "276f1f65a20d04f536989c4f311949d770b52c440c23c2b904a08860f3c93810"
+    },
+    {
+      "file": "appliedenergistics2-19.2.20.jar",
+      "url": "https://cdn.modrinth.com/data/XxWD5pD3/versions/7Ac6mXbf/appliedenergistics2-19.2.20.jar",
+      "sha256": "219cbf2b3e677567d843ddeea568eda75db35dea545b04b7b904c8587c264077"
+    },
+    {
+      "file": "curios-neoforge-9.6.0+1.21.1.jar",
+      "url": "https://cdn.modrinth.com/data/vvuO3ImH/versions/KJsZIQrT/curios-neoforge-9.6.0%2B1.21.1.jar",
+      "sha256": "5ae6703ac25a5cfb138ce34924799b642021c8109aacef578e899e8591d67a3e"
+    },
+    {
+      "file": "guideme-21.1.22.jar",
+      "url": "https://cdn.modrinth.com/data/Ck4E7v7R/versions/QeYKsstN/guideme-21.1.22.jar",
+      "sha256": "108337ff98c706b18ed2fbec077b3337ba72c08f8b46a273534886280e89ef0d"
+    }
+  ]
+}
