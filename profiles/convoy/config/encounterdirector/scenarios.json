@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "groups": {},
+  "encounters": [
+    {
+      "id": "lost_convoy",
+      "enabled": true,
+      "dimension": "starwarsmod:tatooine",
+      "zone": {
+        "min_x": 137,
+        "min_y": 140,
+        "min_z": -8,
+        "max_x": 152,
+        "max_y": 144,
+        "max_z": 8
+      },
+      "enter_trigger": false,
+      "max_alive": 3,
+      "player_radius": 27,
+      "extra_player_scaling": 0,
+      "difficulty_scaling": 0,
+      "timeout_ticks": 12000,
+      "phases": [
+        {
+          "id": "imperial_patrol",
+          "budget": 3,
+          "max_spawns": 3,
+          "warmup_ticks": 100,
+          "objective": "ALL_DEAD",
+          "player_kills_only": true,
+          "formation": "RING",
+          "radius": 4,
+          "surface": false,
+          "obey_mob_spawn_rules": false,
+          "entries": [
+            {
+              "mob": "starwarsmod:stormtrooper",
+              "cost": 1,
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "on_start": {
+        "message": "Имперцы перехватили передачу. У вас пять секунд до атаки."
+      },
+      "on_complete": {
+        "message": "Посадочная площадка чиста. Возвращайтесь к диспетчеру.",
+        "function": "swa_convoy:ambush_cleared"
+      },
+      "on_abort": {
+        "message": "Связь с группой потеряна. Диспетчер должен заново назначить операцию.",
+        "function": "swa_convoy:ambush_aborted"
+      }
+    },
+    {
+      "id": "false_callsign",
+      "enabled": true,
+      "dimension": "starwarsmod:tatooine",
+      "zone": {
+        "min_x": 276,
+        "min_y": 140,
+        "min_z": -10,
+        "max_x": 300,
+        "max_y": 145,
+        "max_z": 10
+      },
+      "enter_trigger": false,
+      "cooldown_ticks": 20,
+      "max_alive": 2,
+      "player_radius": 26,
+      "extra_player_scaling": 0,
+      "difficulty_scaling": 0,
+      "timeout_ticks": 12000,
+      "phases": [
+        {
+          "id": "intercept_squad",
+          "budget": 2,
+          "max_spawns": 2,
+          "warmup_ticks": 80,
+          "objective": "ALL_DEAD",
+          "player_kills_only": true,
+          "formation": "RING",
+          "radius": 7,
+          "surface": false,
+          "obey_mob_spawn_rules": false,
+          "entries": [
+            {
+              "mob": "starwarsmod:stormtrooper",
+              "cost": 1,
+              "weight": 1
+            }
+          ],
+          "on_complete": {
+            "message": "Диспетчер: запись пошла. Имперский офицер уже поднимается к вам."
+          },
+          "next": "signal_officer"
+        },
+        {
+          "id": "signal_officer",
+          "budget": 1,
+          "max_spawns": 1,
+          "warmup_ticks": 100,
+          "objective": "ALL_DEAD",
+          "player_kills_only": true,
+          "formation": "RING",
+          "radius": 7,
+          "surface": false,
+          "obey_mob_spawn_rules": false,
+          "entries": [
+            {
+              "mob": "starwarsmod:imperial_officer",
+              "cost": 1,
+              "weight": 1
+            }
+          ]
+        }
+      ],
+      "on_start": {
+        "message": "Р-17 вышел в эфир. Два противника на подходе. За укрытия."
+      },
+      "on_complete": {
+        "message": "Диспетчер: поймали адрес перевалки. Ищите голубую площадку на X 432.",
+        "function": "swa_convoy:relay_cleared"
+      },
+      "on_abort": {
+        "message": "Р-17 ушёл из эфира. Когда будете готовы, снова включите пульт.",
+        "function": "swa_convoy:relay_aborted"
+      }
+    }
+  ]
+}

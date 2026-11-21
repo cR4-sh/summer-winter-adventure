@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.swa.space.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "HyperspaceBeaconMixin",
+    "PlanetTeleporterMixin",
+    "StarWCraftDeathStarMixin",
+    "StarWCraftNavigationMixin",
+    "StarWCraftOrbitMixin",
+    "StarWCraftPlanetCommandMixin"
+  ],
+  "client": ["StarWCraftNavigationScreenMixin"],
+  "injectors": { "defaultRequire": 1 }
+}

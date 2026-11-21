@@ -1,0 +1,50 @@
+{
+  filename: "starfighter_workshop"
+  group: ""
+  id: "5EA5040000000001"
+  order_index: 3
+  title: "Верфь истребителей"
+  quests: [
+    {
+      id: "5EA5040000000010"
+      x: 0.0d
+      y: 0.0d
+      title: "Интегральная схема"
+      description: ["Изготовь интегральную схему NTM. Найди рецепт на станции пайки через JEI. Для нового гиперпространственного маяка нужны схема, четыре слитка дюрастали и кайбер StarWCraft."]
+      tasks: [{ id: "5EA5040000000011", type: "item", item: { id: "hbm:circuit_basic" } }]
+    }
+    {
+      id: "5EA5040000000020"
+      dependencies: ["5EA5040000000010"]
+      x: 2.0d
+      y: 0.0d
+      title: "Маяк"
+      description: ["Собери маяк на верстаке. Он нужен для ключей X-wing и TIE и других кораблей StarWCraft. Выбери любую из двух веток."]
+      tasks: [{ id: "5EA5040000000021", type: "item", item: { id: "starwarsmod:hyperspace_beacon" } }]
+    }
+    {
+      id: "5EA5040000000030"
+      dependencies: ["5EA5040000000020"]
+      x: 4.0d
+      y: -1.0d
+      title: "Ключ X-wing"
+      tasks: [{ id: "5EA5040000000031", type: "item", item: { id: "starwarsmod:xwing_spawn_egg" } }]
+    }
+    {
+      id: "5EA5040000000040"
+      dependencies: ["5EA5040000000020"]
+      x: 4.0d
+      y: 1.0d
+      title: "Ключ TIE"
+      tasks: [{ id: "5EA5040000000041", type: "item", item: { id: "starwarsmod:tie_fighter_spawn_egg" } }]
+    }
+    {
+      id: "5EA5040000000050"
+      x: 6.0d
+      y: 0.0d
+      title: "Дефлектор"
+      description: ["Изготовь генератор щита и подгони корабль к верстаку Shipyard. Поставь генератор в слот щита. Проверь индикатор и входящий урон до и после установки."]
+      tasks: [{ id: "5EA5040000000051", type: "item", item: { id: "starwars_shipyard:deflector_shield_generator" } }]
+    }
+  ]
+}

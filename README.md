@@ -2,6 +2,8 @@
 
 Техническая ветка сборки для Minecraft Java 1.21.1, NeoForge 21.1.267 и Java 21. NTM: Decentralized Edition ведёт промышленную прогрессию, Unbound даёт цели для космических экспедиций. AE2 нужен для хранения и автокрафта, CC: Tweaked — для мониторинга и управления. JEI показывает рецепты, Jade — состояние машин, FTB Quests связывает этапы с объяснениями. Create в сборку не входит.
 
+В профиле `convoy` все 31 мира StarWCraft доступны через корабельную навигацию Unbound. Установка профиля и начало кампании описаны в [Star Wars MVP](STAR-WARS-MVP.md).
+
 ## Установка
 
 1. Создай отдельный профиль с Minecraft 1.21.1 и NeoForge 21.1.267. Для выделенного сервера используй [официальный установщик NeoForge](https://maven.neoforged.net/releases/net/neoforged/neoforge/21.1.267/neoforge-21.1.267-installer.jar) с аргументом `--installServer`.

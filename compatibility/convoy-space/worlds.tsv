@@ -1,0 +1,32 @@
+id	en_us	ru_ru	orbit	angle	radius	gravity	primary	secondary	pattern
+tatooine	Tatooine	Татуин	35	18	0.90	1.00	c09154	e7ca8f	dunes
+hoth	Hoth	Хот	39	18	0.84	1.00	8baebf	eaf4f8	ice
+endor	Forest Moon of Endor	Лесная луна Эндора	35	34	0.60	0.85	274637	769354	forest
+bespin	Bespin	Беспин	39	34	4.80	1.00	9e6559	ffcc9d	clouds
+coruscant	Coruscant	Корусант	43	34	1.00	1.00	373c50	d4aa7e	city
+naboo	Naboo	Набу	35	50	0.99	1.00	2b567b	90a95f	forest
+corellia	Corellia	Кореллия	39	50	0.98	1.00	43666e	9fc482	forest
+kamino	Kamino	Камино	43	50	1.08	1.03	233f69	8fabbf	ocean
+kashyyyk	Kashyyyk	Кашиик	35	66	1.07	1.05	203d36	6e9049	forest
+dagobah	Dagobah	Дагоба	39	66	0.86	0.95	243d30	77856d	forest
+geonosis	Geonosis	Джеонозис	43	66	0.87	0.90	703520	c38056	dunes
+mustafar	Mustafar	Мустафар	35	82	0.55	0.75	2e2321	e95820	lava
+utapau	Utapau	Утапау	39	82	0.98	1.00	645a37	c6bc89	dunes
+korriban	Korriban	Коррибан	43	82	0.91	1.00	563635	b88160	dunes
+scarif	Scarif	Скариф	35	98	0.83	0.98	21797e	d7ce8f	ocean
+eadu	Eadu	Иду	39	98	0.87	0.95	363d56	8792a3	ice
+jedha	Jedha	Джеда	43	98	0.54	0.80	6d5448	c7b99a	dunes
+jakku	Jakku	Джакку	35	114	0.86	0.95	8f6c49	dcca9a	dunes
+takodana	Takodana	Такодана	39	114	0.95	1.00	375569	83ae66	forest
+vandor	Vandor	Вандор	43	114	0.96	1.00	698087	e1d8cf	ice
+cantonica	Cantonica	Кантоника	35	130	0.89	1.00	876862	cab89e	dunes
+crait	Crait	Крейт	39	130	0.78	0.95	ac7973	f7ede6	ice
+kijimi	Kijimi	Киджими	43	130	0.83	0.95	626f8a	e9dbdc	ice
+ahch_to	Ahch-To	Ак-То	35	146	0.94	1.00	254c77	65936c	ocean
+pasaana	Pasaana	Пасаана	39	146	0.93	1.00	9a684d	e3b987	dunes
+bogano	Bogano	Богано	43	146	0.77	0.90	739581	bcb87a	forest
+exegol	Exegol	Экзегол	35	162	0.91	1.00	242938	746594	ice
+starkiller	Starkiller Base	База «Старкиллер»	39	162	0.81	0.92	536478	e0e6ee	ice
+yavin4	Yavin 4	Явин-4	43	162	0.57	0.86	34463b	a3ac63	forest
+death_star	Death Star	Звезда Смерти	43	18	0.22	1.00	3e484f	a1acb7	station
+kef_bir	Kef Bir	Кеф-Бир	37	34	0.45	0.80	283f61	729e90	ocean

@@ -1,3 +1,4 @@
 *.jar
+!compatibility/convoy-space/dist/swa-space-1.2.0.jar
 __pycache__/
 instance/

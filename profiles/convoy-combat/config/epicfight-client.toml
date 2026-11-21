@@ -1,0 +1,3 @@
+[ingame]
+first_person_model = true
+camera_auto_switch = false

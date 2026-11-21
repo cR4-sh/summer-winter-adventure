@@ -1,0 +1,81 @@
+Installed profile tech: 15 pinned mods and overrides in /private[sandbox]/instances/tech
+Minecraft 1.21.1 / NeoForge 21.1.267 / Java 21
+tech [16:58:09] [Server thread/INFO] [minecraft/DedicatedServer]: Done (4.553s)! For help, type "help"
+tech [16:58:22] [Server thread/INFO] [minecraft/MinecraftServer]: Percentiles: P50: 0,8ms P95: 1,4ms P99: 9,3ms, sample: 100
+tech [16:58:22] [Server thread/INFO] [minecraft/MinecraftServer]: Test passed, count: 27
+tech [16:58:22] [Server thread/INFO] [minecraft/MinecraftServer]: There are 0 of a max of 20 players online:
+tech exit 0
+Installed profile starwcraft: 16 pinned mods and overrides in /private[sandbox]/instances/starwcraft
+Minecraft 1.21.1 / NeoForge 21.1.267 / Java 21
+starwcraft [16:58:40] [Server thread/INFO] [minecraft/DedicatedServer]: Done (5.089s)! For help, type "help"
+starwcraft [16:59:41] [Server thread/INFO] [minecraft/MinecraftServer]: Percentiles: P50: 1,1ms P95: 3,3ms P99: 330,7ms, sample: 100
+starwcraft [16:59:41] [Server thread/INFO] [minecraft/MinecraftServer]: Test passed, count: 33
+starwcraft [16:59:41] [Server thread/INFO] [minecraft/MinecraftServer]: There are 0 of a max of 20 players online:
+starwcraft [16:59:42] [Server thread/INFO] [minecraft/MinecraftServer]: Summoned new Millennium Falcon
+starwcraft [16:59:42] [Server thread/INFO] [minecraft/MinecraftServer]: Summoned new Squad Officer
+starwcraft exit 0
+Installed profile starwcraft-kyber: 17 pinned mods and overrides in /private[sandbox]/instances/starwcraft-kyber
+Minecraft 1.21.1 / NeoForge 21.1.267 / Java 21
+starwcraft-kyber [17:00:01] [Server thread/INFO] [minecraft/DedicatedServer]: Done (5.151s)! For help, type "help"
+starwcraft-kyber [17:00:14] [Server thread/INFO] [minecraft/MinecraftServer]: Percentiles: P50: 0,8ms P95: 1,6ms P99: 7,4ms, sample: 100
+starwcraft-kyber [17:00:14] [Server thread/INFO] [minecraft/MinecraftServer]: Test passed, count: 33
+starwcraft-kyber [17:00:14] [Server thread/INFO] [minecraft/MinecraftServer]: There are 0 of a max of 20 players online:
+starwcraft-kyber [17:00:15] [Server thread/INFO] [minecraft/MinecraftServer]: Summoned new Millennium Falcon
+starwcraft-kyber [17:00:15] [Server thread/INFO] [minecraft/MinecraftServer]: Summoned new Shieldtrooper
+starwcraft-kyber exit 0
+Installed profile dans-epic-fight: 17 pinned mods and overrides in /private[sandbox]/instances/dans-epic-fight
+Minecraft 1.21.1 / NeoForge 21.1.267 / Java 21
+dans-epic-fight [17:00:34] [Server thread/INFO] [minecraft/DedicatedServer]: Done (4.561s)! For help, type "help"
+dans-epic-fight [17:00:46] [Server thread/INFO] [minecraft/MinecraftServer]: Percentiles: P50: 0,9ms P95: 1,5ms P99: 9,4ms, sample: 100
+dans-epic-fight [17:00:46] [Server thread/INFO] [minecraft/MinecraftServer]: Test passed, count: 26
+dans-epic-fight [17:00:46] [Server thread/INFO] [minecraft/MinecraftServer]: There are 0 of a max of 20 players online:
+dans-epic-fight exit 0
+
+Installed profile starwcraft-shipyard: 17 pinned mods and overrides in /private[sandbox]/instances/starwcraft-shipyard
+Minecraft 1.21.1 / NeoForge 21.1.267 / Java 21
+starwcraft-shipyard [17:01:53] [Server thread/INFO] [minecraft/DedicatedServer]: Done (5.070s)! For help, type "help"
+starwcraft-shipyard [17:02:06] [Server thread/INFO] [minecraft/MinecraftServer]: Percentiles: P50: 0,5ms P95: 1,2ms P99: 7,2ms, sample: 100
+starwcraft-shipyard [17:02:06] [Server thread/INFO] [minecraft/MinecraftServer]: Test passed, count: 27
+starwcraft-shipyard [17:02:06] [Server thread/INFO] [minecraft/MinecraftServer]: There are 0 of a max of 20 players online:
+starwcraft-shipyard [17:05:04] [Server thread/INFO] [minecraft/MinecraftServer]: Summoned new Millennium Falcon
+starwcraft-shipyard [17:05:04] [Server thread/INFO] [minecraft/MinecraftServer]: Summoned new Scout Sniper
+starwcraft-shipyard exit 0
+Installed profile blood-beskar: 16 pinned mods and overrides in /private[sandbox]/instances/blood-beskar
+Minecraft 1.21.1 / NeoForge 21.1.267 / Java 21
+blood-beskar [17:05:25] [Server thread/INFO] [minecraft/DedicatedServer]: Done (4.552s)! For help, type "help"
+blood-beskar [17:05:38] [Server thread/INFO] [minecraft/MinecraftServer]: Percentiles: P50: 1,0ms P95: 1,5ms P99: 8,3ms, sample: 100
+blood-beskar [17:05:38] [Server thread/INFO] [minecraft/MinecraftServer]: Test passed, count: 26
+blood-beskar [17:05:38] [Server thread/INFO] [minecraft/MinecraftServer]: There are 0 of a max of 20 players online:
+blood-beskar exit 0
+Installed profile blood-beskar-pull: 16 pinned mods and overrides in /private[sandbox]/instances/blood-beskar-pull
+Minecraft 1.21.1 / NeoForge 21.1.267 / Java 21
+blood-beskar-pull [17:05:57] [Server thread/INFO] [minecraft/DedicatedServer]: Done (4.141s)! For help, type "help"
+blood-beskar-pull [17:06:09] [Server thread/INFO] [minecraft/MinecraftServer]: Percentiles: P50: 0,9ms P95: 1,5ms P99: 6,0ms, sample: 100
+blood-beskar-pull [17:06:09] [Server thread/INFO] [minecraft/MinecraftServer]: Test passed, count: 27
+blood-beskar-pull [17:06:09] [Server thread/INFO] [minecraft/MinecraftServer]: There are 0 of a max of 20 players online:
+blood-beskar-pull exit 0
+Installed profile convoy: 19 pinned mods and overrides in /private[sandbox]/instances/convoy
+Minecraft 1.21.1 / NeoForge 21.1.267 / Java 21
+convoy [17:06:28] [Server thread/INFO] [minecraft/DedicatedServer]: Done (5.168s)! For help, type "help"
+convoy [17:06:40] [Server thread/INFO] [minecraft/MinecraftServer]: Percentiles: P50: 1,1ms P95: 2,0ms P99: 6,2ms, sample: 100
+convoy [17:06:40] [Server thread/INFO] [minecraft/MinecraftServer]: Test passed, count: 27
+convoy [17:06:40] [Server thread/INFO] [minecraft/MinecraftServer]: There are 0 of a max of 20 players online:
+convoy [17:06:41] [Server thread/INFO] [minecraft/MinecraftServer]: Summoned new Millennium Falcon
+convoy [17:06:41] [Server thread/INFO] [minecraft/MinecraftServer]: Summoned new Imperial Stormtrooper
+convoy [17:06:43] [Server thread/INFO] [minecraft/MinecraftServer]: Test passed, count: 1
+convoy exit 0
+
+Installed profile convoy: 19 pinned mods and overrides in /private[sandbox]/instances/convoy
+Minecraft 1.21.1 / NeoForge 21.1.267 / Java 21
+convoy [18:05:15] [Server thread/INFO] [minecraft/DedicatedServer]: Done (1.507s)! For help, type "help"
+convoy [18:05:27] [Server thread/INFO] [minecraft/MinecraftServer]: Percentiles: P50: 1,1ms P95: 1,7ms P99: 3,8ms, sample: 100
+convoy [18:05:27] [Server thread/INFO] [minecraft/MinecraftServer]: Test passed, count: 30
+convoy [18:05:27] [Server thread/INFO] [minecraft/MinecraftServer]: There are 0 of a max of 20 players online:
+convoy [18:05:28] [Server thread/INFO] [minecraft/MinecraftServer]: Summoned new Millennium Falcon
+convoy [18:05:28] [Server thread/INFO] [minecraft/MinecraftServer]: Summoned new Flametrooper
+convoy [18:05:30] [Server thread/INFO] [minecraft/MinecraftServer]: Test passed, count: 1
+convoy exit 0
+
+[17:18:20] [Server thread/INFO] [KubeJS Server/]: SWA QA first-rank range: 10
+[17:18:23] [Server thread/INFO] [KubeJS Server/]: server_scripts:swa_qa.js#6: SWA QA first-rank range: 16
+[17:18:25] [Server thread/INFO] [KubeJS Server/]: server_scripts:swa_qa.js#6: SWA QA first-rank range: 10

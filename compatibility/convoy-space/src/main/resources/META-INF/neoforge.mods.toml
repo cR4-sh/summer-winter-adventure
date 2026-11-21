@@ -1,0 +1,59 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "All Rights Reserved"
+
+[[mods]]
+modId = "swa_space"
+version = "1.2.0"
+displayName = "Summer Winter Adventure Space"
+description = "Unbound flight and navigation for StarWCraft worlds in the Convoy profile."
+
+[[mixins]]
+config = "swa_space.mixins.json"
+
+[[mixins]]
+config = "swa_convoy_travel.mixins.json"
+
+[[mixins]]
+config = "swa_convoy_onboarding.mixins.json"
+
+[[mixins]]
+config = "swa_convoy_combat.mixins.json"
+
+[[mixins]]
+config = "swa_convoy_force.mixins.json"
+
+[[dependencies.swa_space]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1]"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.swa_space]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.267,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.swa_space]]
+modId = "unbound"
+type = "required"
+versionRange = "[0.16.1]"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.swa_space]]
+modId = "starwarsmod"
+type = "required"
+versionRange = "[1.4.0]"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.swa_space]]
+modId = "epicfight"
+type = "required"
+versionRange = "[21.17.3.1]"
+ordering = "AFTER"
+side = "BOTH"

@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.swa.space.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ConvoyForceCastMixin",
+    "ConvoyLegacyForcePoseMixin",
+    "ConvoyForceChannelMixin"
+  ],
+  "injectors": { "defaultRequire": 1 }
+}

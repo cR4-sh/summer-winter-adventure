@@ -78,5 +78,128 @@
       "url": "https://cdn.modrinth.com/data/Ck4E7v7R/versions/QeYKsstN/guideme-21.1.22.jar",
       "sha256": "108337ff98c706b18ed2fbec077b3337ba72c08f8b46a273534886280e89ef0d"
     }
-  ]
+  ],
+  "additions": {
+    "starwcraft": {
+      "file": "StarWCraft-1.4.0.jar",
+      "url": "https://edge.forgecdn.net/files/9483/190/StarWCraft-1.4.0.jar",
+      "sha256": "909d119d3e71078c363d3738b59f07a8dbc2a5a42e25ca32b1a1d39a94d79ea5"
+    },
+    "kyber": {
+      "file": "StarWarsKyber-1.0.jar",
+      "url": "https://edge.forgecdn.net/files/9268/094/StarWarsKyber-1.0.jar",
+      "sha256": "bf5d7dbf71d4d5257459946bc60e593ec2fa9f61f5d32a5379f5ef9117d4fb65"
+    },
+    "shipyard": {
+      "file": "StarWarsShipyard-1.0.jar",
+      "url": "https://edge.forgecdn.net/files/9268/104/StarWarsShipyard-1.0.jar",
+      "sha256": "cc3d108815b726f2e93ec4eacae3582d9d23f14c011fd2e674062f4b871ebcf9"
+    },
+    "director": {
+      "file": "entitydirector-1.1.0-neoforge-1.21.1.jar",
+      "url": "https://edge.forgecdn.net/files/8964/543/entitydirector-1.1.0-neoforge-1.21.1.jar",
+      "sha256": "5521273ad589556a079f1a952cccad0c7ac466e1c7785e50896bf891626cd874"
+    },
+    "convoy-space": {
+      "file": "swa-space-1.2.0.jar",
+      "path": "compatibility/convoy-space/dist/swa-space-1.2.0.jar",
+      "sha256": "2475bd6a42314dba644781764efe76d730eb526502cb4add8f3c60bd595f93b3",
+      "replaces": {
+        "swa-space-1.0.0.jar": "7a3b0cd8a62e031d8d096024bbbeb45d0c2f2da4853367a1895b2b3c7914dab9",
+        "swa-space-1.1.0.jar": "547a86fba90526296d6c158e87ecca38ac653d02df4a23c531ce80db8ae283e4"
+      }
+    },
+    "blood-beskar": {
+      "file": "swbb-neoforge-1.21.1-1.9.1-beta.jar",
+      "url": "https://edge.forgecdn.net/files/9638/641/swbb-neoforge-1.21.1-1.9.1-beta.jar",
+      "sha256": "ba8b7f62d653ae3b393f2585718b12ce1fa46fc462b91ced92720bc03e65aeea"
+    },
+    "dans": {
+      "file": "lightsabers-1.21.1-6.0.jar",
+      "url": "https://edge.forgecdn.net/files/8552/501/lightsabers-1.21.1-6.0.jar",
+      "sha256": "1de6e4f074df34d0b4f44230b14a286c8401846f297e94c9a358b756bc1b9fa1"
+    },
+    "epic-fight": {
+      "file": "epic-fight-21.17.3.1-mc1.21.1-neoforge.jar",
+      "url": "https://edge.forgecdn.net/files/8175/609/epic-fight-21.17.3.1-mc1.21.1-neoforge.jar",
+      "sha256": "8b882554cf10086398340fbdc741819ee72a801a3adce516c7f4768326a39526"
+    }
+  },
+  "resource_packs": {
+    "faithful-32x": {
+      "file": "Faithful 32x - 1.21.1.zip",
+      "url": "https://cdn.modrinth.com/data/w0TnApzs/versions/ruZOIEZE/Faithful%2032x%20-%201.21.1.zip",
+      "sha256": "15e093da38af37e11531c6cfeb9787f5617c20009c68b789eb62cfafe53c2762"
+    }
+  },
+  "profiles": {
+    "tech": {
+      "mods": [],
+      "overrides": []
+    },
+    "starwcraft": {
+      "mods": [
+        "starwcraft"
+      ],
+      "overrides": []
+    },
+    "starwcraft-kyber": {
+      "mods": [
+        "starwcraft",
+        "kyber"
+      ],
+      "overrides": []
+    },
+    "starwcraft-shipyard": {
+      "mods": [
+        "starwcraft",
+        "shipyard"
+      ],
+      "overrides": [
+        "starwcraft-engineering"
+      ]
+    },
+    "convoy": {
+      "mods": [
+        "starwcraft",
+        "kyber",
+        "shipyard",
+        "director",
+        "convoy-space",
+        "epic-fight"
+      ],
+      "overrides": [
+        "starwcraft-engineering",
+        "convoy",
+        "convoy-combat"
+      ],
+      "resource_packs": [
+        "faithful-32x"
+      ]
+    },
+    "blood-beskar": {
+      "mods": [
+        "blood-beskar"
+      ],
+      "overrides": [
+        "blood-beskar"
+      ]
+    },
+    "blood-beskar-pull": {
+      "mods": [
+        "blood-beskar"
+      ],
+      "overrides": [
+        "blood-beskar",
+        "blood-beskar-pull"
+      ]
+    },
+    "dans-epic-fight": {
+      "mods": [
+        "dans",
+        "epic-fight"
+      ],
+      "overrides": []
+    }
+  }
 }

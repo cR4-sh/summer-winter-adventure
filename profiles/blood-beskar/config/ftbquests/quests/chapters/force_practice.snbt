@@ -1,0 +1,21 @@
+{
+  filename: "force_practice"
+  group: ""
+  id: "5EA5030000000001"
+  order_index: 2
+  title: "Практика Силы"
+  quests: [
+    {
+      id: "5EA5030000000010"
+      title: "Настройка кристалла"
+      description: [
+        "Принеси шесть осколков аметиста и сдай их через задание. В этой итерации они заменяют исследование Thaumaturge."
+        "Ученик, который заберёт награду, получит голокрон Притяжения. Используй голокрон, чтобы открыть чувствительность и изучить приём. Затем назначь его в меню Силы Blood & Beskar."
+      ]
+      x: 0.0d
+      y: 0.0d
+      tasks: [{ id: "5EA5030000000011", type: "item", item: { id: "minecraft:amethyst_shard" }, count: 6L, consume_items: true }]
+      rewards: [{ id: "5EA5030000000012", type: "item", item: { id: "swbb:force_pull_holocron" }, team_reward: true }]
+    }
+  ]
+}

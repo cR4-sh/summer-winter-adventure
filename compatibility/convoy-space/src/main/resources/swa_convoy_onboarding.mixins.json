@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.swa.space.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": ["StarWCraftLoginMixin", "StarWCraftJourneyMixin", "StarWCraftCrawlMixin", "StarWCraftSagaPacketsMixin"],
+  "client": [
+    "StarWCraftWorldScreenMixin",
+    "StarWCraftClassScreenMixin",
+    "StarWCraftSagaScreenMixin",
+    "StarWCraftOnboardingKeysMixin",
+    "StarWCraftTutorialHudMixin",
+    "ConvoyCampaignKeysMixin"
+  ],
+  "injectors": { "defaultRequire": 1 }
+}
