@@ -6,20 +6,9 @@ import net.minecraft.client.model.geom.builders.CubeListBuilder;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
-import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 
-@EventBusSubscriber(modid = GearPreview.ID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
-public final class TrooperArmor {
-    public static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(GearPreview.ID, "textures/trooper.png");
+final class TrooperArmor {
     private static final int CERAMIC = 0;
     private static final int GRAPHITE = 48;
     private static final int GREY = 96;
@@ -29,39 +18,7 @@ public final class TrooperArmor {
     private static final int WIDTH = 288;
     private static final int HEIGHT = 32;
 
-    @SubscribeEvent
-    public static void register(RegisterClientExtensionsEvent event) {
-        IClientItemExtensions extension = new IClientItemExtensions() {
-            private HumanoidModel<LivingEntity> outer;
-            private HumanoidModel<LivingEntity> legs;
-
-            @Override
-            public HumanoidModel<?> getHumanoidArmorModel(LivingEntity entity, ItemStack stack, EquipmentSlot slot,
-                    HumanoidModel<?> original) {
-                if (outer == null) {
-                    outer = model(false);
-                    legs = model(true);
-                }
-                return slot == EquipmentSlot.LEGS ? legs : outer;
-            }
-        };
-        event.registerItem(extension, item("helmet"), item("chestplate"), item("leggings"), item("boots"));
-    }
-
-    private static net.minecraft.world.item.Item item(String part) {
-        return BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("starwarsmod", "stormtrooper_" + part));
-    }
-
-    public static boolean matches(ItemStack stack) {
-        var key = BuiltInRegistries.ITEM.getKey(stack.getItem());
-        if (!key.getNamespace().equals("starwarsmod")) return false;
-        return switch (key.getPath()) {
-            case "stormtrooper_helmet", "stormtrooper_chestplate", "stormtrooper_leggings", "stormtrooper_boots" -> true;
-            default -> false;
-        };
-    }
-
-    private static HumanoidModel<LivingEntity> model(boolean inner) {
+    static HumanoidModel<LivingEntity> model(boolean inner) {
         MeshDefinition mesh = new MeshDefinition();
         var root = mesh.getRoot();
         helmet(root);

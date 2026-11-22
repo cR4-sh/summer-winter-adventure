@@ -144,7 +144,7 @@
     "convoy-gear": {
       "file": "swa-gear-preview.jar",
       "path": "compatibility/convoy-gear/dist/swa-gear-preview.jar",
-      "sha256": "2e0d09587dc565dedf2f0ca2bd27465017b84827f1d9cc758f071b6213c243cc"
+      "sha256": "c1052c7846332beeb8bc545f8affefb065fa2edd202eb0d215be6d805c2bf8ed"
     },
     "convoy-force-training": {
       "file": "swa-force-training-1.1.0.jar",

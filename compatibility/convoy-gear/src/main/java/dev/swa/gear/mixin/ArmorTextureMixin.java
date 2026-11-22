@@ -1,6 +1,6 @@
 package dev.swa.gear.mixin;
 
-import dev.swa.gear.TrooperArmor;
+import dev.swa.gear.StarWarsArmor;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -15,8 +15,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(ClientHooks.class)
 abstract class ArmorTextureMixin {
     @Inject(method = "getArmorTexture", at = @At("HEAD"), cancellable = true)
-    private static void preview$trooperTexture(Entity entity, ItemStack stack, ArmorMaterial.Layer layer,
+    private static void preview$armorTexture(Entity entity, ItemStack stack, ArmorMaterial.Layer layer,
             boolean inner, EquipmentSlot slot, CallbackInfoReturnable<ResourceLocation> callback) {
-        if (TrooperArmor.matches(stack)) callback.setReturnValue(TrooperArmor.TEXTURE);
+        ResourceLocation texture = StarWarsArmor.texture(stack);
+        if (texture != null) callback.setReturnValue(texture);
     }
 }
