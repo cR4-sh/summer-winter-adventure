@@ -1,4 +1,8 @@
 *.jar
 !compatibility/convoy-space/dist/swa-space-1.2.0.jar
+!compatibility/convoy-space/dist/swa-space-1.2.1.jar
+!compatibility/convoy-research/dist/swa-research-1.0.0.jar
+!compatibility/convoy-gear/dist/swa-gear-preview.jar
+!compatibility/convoy-force-training/dist/swa-force-training-1.1.0.jar
 __pycache__/
 instance/

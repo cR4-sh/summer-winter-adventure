@@ -11,7 +11,10 @@
   ],
   "client": [
     "ConvoyDirectorKeysMixin",
+    "ConvoyEpicFightFirearmKeysMixin",
     "ConvoyEpicFightKeysMixin",
+    "ConvoyKeyDefaultsMixin",
+    "ConvoyKeyMappingAccessor",
     "ConvoyStarWCraftCombatKeysMixin"
   ],
   "injectors": { "defaultRequire": 1 }

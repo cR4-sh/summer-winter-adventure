@@ -44,6 +44,92 @@ def migrate_convoy_keys(options):
         options.write_bytes(updated)
 
 
+# The original bindings let multiple gameplay handlers respond to one input.
+# Screen-only shortcuts can share a key with gameplay controls.
+CONVOY_KEY_CHANGES = {
+    b"key.saveToolbarActivator": (b"c", b"keypad.add"),
+    b"key.loadToolbarActivator": (b"x", b"keypad.subtract"),
+    b"key.unbound.hint": (b"h", b"page.up"),
+    b"key.curios.open.desc": (b"g", b"insert"),
+    b"key.guideme.guide": (b"g", b"end"),
+    b"key.kubejs.kubedex": (b"k", b"keypad.multiply"),
+    b"key.hbm.reload": (b"r", b"x"),
+    b"key.hbm.trainInv": (b"r", b"backslash"),
+    b"key.hbm.toggleHUD": (b"v", b"keypad.7"),
+    b"key.hbm.toggleBack": (b"c", b"keypad.8"),
+    b"key.hbm.toggleMagnet": (b"z", b"keypad.9"),
+    b"key.hbm.gunTertiary": (b"key.mouse.middle", b"keypad.enter"),
+    b"key.hbm.qmaw": (b"f1", b"home"),
+    b"hbm.key.calculator": (b"n", b"f4"),
+    b"key.hbm.dash": (b"left.shift", b"right.shift"),
+    b"key.hbm.copyToolAlt": (b"left.alt", b"right.alt"),
+    b"key.hbm.abilityAlt": (b"left.alt", b"right.alt"),
+    b"key.epicfight.lock_on_shift_freely": (b"key.mouse.middle", b"right.control"),
+    b"key.epicfight.lock_on_shift_left": (b"left", b"minus"),
+    b"key.epicfight.lock_on_shift_right": (b"right", b"equal"),
+    b"key.starwarsmod.quick_pull": (b"grave.accent", b"right.bracket"),
+    b"key.starwarsmod.quest_tracker": (b"up", b"keypad.decimal"),
+}
+
+RESEARCH_KEY_CHANGES = {
+    b"key.thaumaturge.thaumonomicon": (b"n", b"f12"),
+    b"key.thaumaturge.change_focus": (b"f", b"page.down"),
+    b"key.thaumaturge.toggle_hover": (b"h", b"keypad.6"),
+    b"key.thaumaturge.misc_toggle": (b"g", b"keypad.divide"),
+}
+
+CONVOY_CONTEXTUAL_KEYS = {
+    b"key_key.unbound.hint": {b"key_key.jei.previousRecipePage"},
+    b"key_key.thaumaturge.change_focus": {b"key_key.jei.nextRecipePage"},
+    b"key_key.epicfight.lock_on_shift_left": {b"key_key.ftbquests.gui.zoom_out"},
+    b"key_key.epicfight.lock_on_shift_right": {b"key_key.ftbquests.gui.zoom_in"},
+    b"key_key.hbm.copyToolAlt": {b"key_key.hbm.abilityAlt"},
+    b"key_key.hbm.abilityAlt": {b"key_key.hbm.copyToolAlt"},
+}
+
+
+def configure_convoy_keys(options, research):
+    original = options.read_bytes() if options.is_file() else b""
+    newline = b"\r\n" if b"\r\n" in original else b"\n"
+    lines = original.splitlines(keepends=True)
+    bindings = {}
+    for index, line in enumerate(lines):
+        name, separator, value = line.rstrip(b"\r\n").partition(b":")
+        if separator and name.startswith(b"key_"):
+            bindings[name] = (index, value)
+
+    configured = CONVOY_KEY_CHANGES | (RESEARCH_KEY_CHANGES if research else {})
+    destinations = {}
+    for action, (previous, destination) in configured.items():
+        name = b"key_" + action
+        previous_value = previous if previous.startswith(b"key.") else b"key.keyboard." + previous
+        if bindings.get(name, (None, previous_value))[1] == previous_value:
+            destinations[name] = b"key.keyboard." + destination
+
+    retained = set(bindings) - destinations.keys()
+    for name, destination in destinations.items():
+        index = bindings.get(name, (None, None))[0]
+        # Some destinations have a separate handler in an inventory or quest screen.
+        # A saved custom binding takes precedence over a proposed pack default.
+        if any(bindings[key][1] == destination and key not in CONVOY_CONTEXTUAL_KEYS.get(name, ())
+               for key in retained):
+            print(f"{name.decode()} left unbound because {destination.decode()} is already assigned.")
+            destination = b"key.keyboard.unknown"
+        line = name + b":" + destination + newline
+        if index is None:
+            if lines and not lines[-1].endswith(b"\n"):
+                lines[-1] += newline
+            lines.append(line)
+        else:
+            lines[index] = line
+    updated = b"".join(lines)
+    if updated != original:
+        # Options without a data version are read as pre-1.13 numeric keycodes.
+        if not any(line.startswith(b"version:") for line in lines):
+            updated = b"version:3955" + newline + updated  # Minecraft 1.21.1
+        options.write_bytes(updated)
+
+
 def enable_resource_packs(options, names):
     original = options.read_bytes() if options.is_file() else b""
     lines = original.splitlines(keepends=True)
@@ -116,8 +202,10 @@ def install(instance, profile="tech"):
     shutil.copytree(ROOT / "overrides", instance, dirs_exist_ok=True)
     for overlay in selected["overrides"]:
         shutil.copytree(ROOT / "profiles" / overlay, instance, dirs_exist_ok=True)
-    if profile == "convoy" and any(old_mod.name == "swa-space-1.0.0.jar" for old_mod in retired):
-        migrate_convoy_keys(instance / "options.txt")
+    if profile in {"convoy", "convoy-research", "convoy-force-training"}:
+        if any(old_mod.name == "swa-space-1.0.0.jar" for old_mod in retired):
+            migrate_convoy_keys(instance / "options.txt")
+        configure_convoy_keys(instance / "options.txt", research=profile != "convoy")
     if packs:
         enable_resource_packs(instance / "options.txt", ["file/" + entry["file"] for entry in packs])
     for old_mod in retired:

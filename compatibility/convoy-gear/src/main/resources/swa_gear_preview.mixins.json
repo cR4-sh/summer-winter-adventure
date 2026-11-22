@@ -1,0 +1,25 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.swa.gear.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BlasterImpactMixin",
+    "BlasterShotMixin",
+    "SaberSustainedGuardMixin"
+  ],
+  "client": [
+    "BlasterMotionMixin",
+    "BlasterBoltViewMixin",
+    "EpicFirearmViewMixin",
+    "ArmorTextureMixin",
+    "SaberUseInputMixin",
+    "SaberHybridGuardMixin",
+    "SaberAmbientParticleMixin",
+    "SaberSoundVolumeMixin",
+    "EpicSaberViewMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

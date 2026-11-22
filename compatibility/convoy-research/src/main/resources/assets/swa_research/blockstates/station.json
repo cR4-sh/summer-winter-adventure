@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "action=enroll": { "model": "minecraft:block/lodestone" },
+    "action=control_glove": { "model": "minecraft:block/polished_andesite" },
+    "action=historical_glove": { "model": "minecraft:block/polished_andesite" },
+    "action=predict_material": { "model": "minecraft:block/copper_block" },
+    "action=predict_personal_history": { "model": "minecraft:block/copper_block" },
+    "action=comparison_token": { "model": "minecraft:block/gold_block" },
+    "action=ship_buckle": { "model": "minecraft:block/chiseled_stone_bricks" }
+  }
+}

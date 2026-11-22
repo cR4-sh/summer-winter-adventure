@@ -6,6 +6,7 @@ import csv
 import json
 import math
 import os
+import runpy
 import struct
 import subprocess
 import tempfile
@@ -16,7 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 PACK = ROOT.parents[1]
-ARTIFACT = ROOT / "dist" / "swa-space-1.2.0.jar"
+ARTIFACT = ROOT / "dist" / "swa-space-1.2.1.jar"
 
 
 def png_chunk(kind, data):
@@ -109,17 +110,21 @@ def assets(worlds):
     yield "swa_space_worlds.json", json.dumps(catalog).encode("utf-8")
 
 
-def build(libraries, mods, javac):
+def build(libraries, mods, javac, client_libraries):
     lock = json.loads((PACK / "mods.lock.json").read_text(encoding="utf-8"))
     unbound = next(entry["file"] for entry in lock["mods"] if entry["file"].startswith("unbound-"))
     starwcraft = next(entry["file"] for entry in lock["additions"].values()
                      if entry["file"].startswith("StarWCraft-"))
     epic_fight = lock["additions"]["epic-fight"]["file"]
+    hbm = next(entry["file"] for entry in lock["mods"] if entry["file"].startswith("ntm-decentralized-"))
     worlds = load_worlds(mods / starwcraft)
     forge = libraries / "net/neoforged/neoforge" / lock["neoforge"]
     server = forge / f"neoforge-{lock['neoforge']}-server.jar"
     universal = forge / f"neoforge-{lock['neoforge']}-universal.jar"
-    required = [server, universal, mods / unbound, mods / starwcraft, mods / epic_fight]
+    client = list((client_libraries / "net/minecraft/client").glob(f"{lock['minecraft']}-*/client-*-srg.jar"))
+    if len(client) != 1:
+        raise ValueError("Use --client-libraries with the libraries directory from the pinned NeoForge client.")
+    required = [server, universal, *client, mods / unbound, mods / starwcraft, mods / epic_fight, mods / hbm]
     for path in required:
         if not path.is_file():
             raise FileNotFoundError(path)
@@ -143,6 +148,12 @@ def build(libraries, mods, javac):
                          for file in directory.rglob("*") if file.is_file())
         name, content = yavin_biome(mods / starwcraft)
         files[name] = content
+        installer = runpy.run_path(str(PACK / "install.py"))
+        key_changes = installer["CONVOY_KEY_CHANGES"] | installer["RESEARCH_KEY_CHANGES"]
+        files["swa_convoy_key_defaults.tsv"] = b"".join(
+            action + b"\tkey.keyboard." + destination + b"\n"
+            for action, (_, destination) in sorted(key_changes.items())
+        )
         for name, content in assets(worlds):
             if name in files:
                 strings = json.loads(files[name]) | json.loads(content)
@@ -163,5 +174,6 @@ if __name__ == "__main__":
     parser.add_argument("libraries", type=Path, help="libraries directory from a NeoForge server install")
     parser.add_argument("mods", type=Path, help="mods directory from an installed Convoy profile")
     parser.add_argument("--javac", default="javac", help="path to the Java 21 compiler")
+    parser.add_argument("--client-libraries", type=Path, help="libraries directory from the pinned NeoForge client")
     args = parser.parse_args()
-    build(args.libraries.resolve(), args.mods.resolve(), args.javac)
+    build(args.libraries.resolve(), args.mods.resolve(), args.javac, (args.client_libraries or args.libraries).resolve())

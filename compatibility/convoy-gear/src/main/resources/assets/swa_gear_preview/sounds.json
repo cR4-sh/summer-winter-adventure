@@ -1,0 +1,6 @@
+{
+  "blaster_shoot": {
+    "subtitle": "subtitles.starwarsmod.blaster_shoot",
+    "sounds": ["swa_gear_preview:wire_blaster"]
+  }
+}

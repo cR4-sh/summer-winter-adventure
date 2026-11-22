@@ -1,0 +1,10 @@
+{
+  "subtitles.swa_gear_preview.blaster_impact": "Попадание бластера",
+  "key.swa_gear_preview.toggle_saber": "Включить или погасить световой меч",
+  "swa_gear_preview.saber.guarding": "Блок",
+  "swa_gear_preview.saber.needs_blade": "%s — включить клинок",
+  "swa_gear_preview.saber.needs_battle": "%s — боевой режим",
+  "swa_gear_preview.saber.release_guard": "Сначала отпусти блок",
+  "swa_gear_preview.saber.ignited": "Клинок включён",
+  "swa_gear_preview.saber.extinguished": "Клинок погашен"
+}

@@ -4,7 +4,7 @@ license = "All Rights Reserved"
 
 [[mods]]
 modId = "swa_space"
-version = "1.2.0"
+version = "1.2.1"
 displayName = "Summer Winter Adventure Space"
 description = "Unbound flight and navigation for StarWCraft worlds in the Convoy profile."
 

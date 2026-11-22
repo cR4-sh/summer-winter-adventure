@@ -1,0 +1,23 @@
+{
+  "block.swa_research.station": "Field research station",
+  "swa_research.subtitle.double_knock": "Two knocks against a bulkhead",
+  "swa_research.lesson.enrolled": "Archivist lesson accepted. Open Force Practices in the holocron and examine the radio operator’s glove.",
+  "swa_research.lesson.requires_enrollment": "Opt in at the archivist’s holocron to try the two gloves.",
+  "swa_research.lesson.requires_echo": "Hear the echo in the radio operator’s glove.",
+  "swa_research.lesson.requires_observation": "Complete Object Echo in the holocron.",
+  "swa_research.lesson.requires_both_gloves": "Examine the radio operator’s glove and the identical spare before making your prediction.",
+  "swa_research.lesson.control_glove": "The spare glove has the same fabric and lining. You sense no echo.",
+  "swa_research.lesson.historical_echo": "Two knocks. Someone is holding another person upright.",
+  "swa_research.lesson.prediction.material": "Prediction recorded. The metal token should stay silent if the glove’s material causes the echo.",
+  "swa_research.lesson.prediction.personal_history": "Prediction recorded. The metal token should carry an echo if the event left a trace.",
+  "swa_research.lesson.prediction_already_set": "You have recorded a prediction. Test it on the signal officer’s token.",
+  "swa_research.lesson.needs_prediction": "Record a prediction before examining the signal officer’s token.",
+  "swa_research.lesson.needs_comparison": "Test your prediction on the signal officer’s token before finishing this page.",
+  "swa_research.lesson.token_echo": "The cold metal carries a fragment of a voice. “Lean on me. We’ll make it.”",
+  "swa_research.lesson.contradicted": "The metal token echoed and the spare glove stayed silent. The material hypothesis fails. Record a new prediction and try again.",
+  "swa_research.lesson.verified": "Two different materials carry traces of the same event. Finish Testing the Evidence in the archivist’s holocron.",
+  "swa_research.lesson.theory_already_verified": "Your result is already verified. Open the archivist’s holocron to review it.",
+  "swa_research.lesson.mastered": "Psychometry learned. You can read the buckle on the crate by the loading ramp.",
+  "swa_research.lesson.buckle_locked": "You can’t hold on to the impression. Finish Testing the Evidence in the holocron.",
+  "swa_research.lesson.buckle_echo": "The clasp snaps shut. Someone hides a field kit behind the loading ramp."
+}

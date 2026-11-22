@@ -1,0 +1,14 @@
+{
+  "category": "swa_research:force_practices",
+  "name": "research.swa_research.psychometry.title",
+  "parents": ["swa_research:echo_observation"],
+  "column": 2,
+  "row": 0,
+  "meta": ["round"],
+  "icons": ["minecraft:amethyst_shard"],
+  "stages": [
+    {"text": "research.swa_research.psychometry.stage_0"},
+    {"text": "research.swa_research.psychometry.stage_1"},
+    {"text": "research.swa_research.psychometry.stage_2"}
+  ]
+}

@@ -101,12 +101,13 @@
       "sha256": "5521273ad589556a079f1a952cccad0c7ac466e1c7785e50896bf891626cd874"
     },
     "convoy-space": {
-      "file": "swa-space-1.2.0.jar",
-      "path": "compatibility/convoy-space/dist/swa-space-1.2.0.jar",
-      "sha256": "2475bd6a42314dba644781764efe76d730eb526502cb4add8f3c60bd595f93b3",
+      "file": "swa-space-1.2.1.jar",
+      "path": "compatibility/convoy-space/dist/swa-space-1.2.1.jar",
+      "sha256": "edbc94bc0f89cb5de87acb3b62229e35d69d5557a57380f5b2d5b50787ada594",
       "replaces": {
         "swa-space-1.0.0.jar": "7a3b0cd8a62e031d8d096024bbbeb45d0c2f2da4853367a1895b2b3c7914dab9",
-        "swa-space-1.1.0.jar": "547a86fba90526296d6c158e87ecca38ac653d02df4a23c531ce80db8ae283e4"
+        "swa-space-1.1.0.jar": "547a86fba90526296d6c158e87ecca38ac653d02df4a23c531ce80db8ae283e4",
+        "swa-space-1.2.0.jar": "2475bd6a42314dba644781764efe76d730eb526502cb4add8f3c60bd595f93b3"
       }
     },
     "blood-beskar": {
@@ -123,6 +124,31 @@
       "file": "epic-fight-21.17.3.1-mc1.21.1-neoforge.jar",
       "url": "https://edge.forgecdn.net/files/8175/609/epic-fight-21.17.3.1-mc1.21.1-neoforge.jar",
       "sha256": "8b882554cf10086398340fbdc741819ee72a801a3adce516c7f4768326a39526"
+    },
+    "thaumaturge": {
+      "file": "thaumaturge-1.21.1-NeoForge-1.1.0.jar",
+      "url": "https://edge.forgecdn.net/files/9452/543/thaumaturge-1.21.1-NeoForge-1.1.0.jar",
+      "sha256": "2671390136fad5ac9abd36797cb0a5a938967a5c32399442589bb7720d463900"
+    },
+    "lithostitched": {
+      "file": "lithostitched-1.8.1-neoforge-21.1.jar",
+      "url": "https://cdn.modrinth.com/data/XaDC71GB/versions/cZu4cHY3/lithostitched-1.8.1-neoforge-21.1.jar",
+      "sha256": "e0da669fa5facc61a09b9b7bae21b322993de1fcd1eb05787adffb7309598cca"
+    },
+    "convoy-research": {
+      "file": "swa-research-1.0.0.jar",
+      "path": "compatibility/convoy-research/dist/swa-research-1.0.0.jar",
+      "sha256": "3e5b2de76ab362d8eb592dba6dafe6b59bcb78da924da764491081d3724e4b59"
+    },
+    "convoy-gear": {
+      "file": "swa-gear-preview.jar",
+      "path": "compatibility/convoy-gear/dist/swa-gear-preview.jar",
+      "sha256": "2e0d09587dc565dedf2f0ca2bd27465017b84827f1d9cc758f071b6213c243cc"
+    },
+    "convoy-force-training": {
+      "file": "swa-force-training-1.1.0.jar",
+      "path": "compatibility/convoy-force-training/dist/swa-force-training-1.1.0.jar",
+      "sha256": "821a928f03c5250b695f8ca286df0ceb268275ee9c18353eb68c7b8d73178b6a"
     }
   },
   "resource_packs": {
@@ -166,12 +192,60 @@
         "shipyard",
         "director",
         "convoy-space",
+        "convoy-gear",
         "epic-fight"
       ],
       "overrides": [
         "starwcraft-engineering",
         "convoy",
         "convoy-combat"
+      ],
+      "resource_packs": [
+        "faithful-32x"
+      ]
+    },
+    "convoy-research": {
+      "mods": [
+        "starwcraft",
+        "kyber",
+        "shipyard",
+        "director",
+        "convoy-space",
+        "convoy-gear",
+        "epic-fight",
+        "thaumaturge",
+        "lithostitched",
+        "convoy-research"
+      ],
+      "overrides": [
+        "starwcraft-engineering",
+        "convoy",
+        "convoy-combat",
+        "convoy-research"
+      ],
+      "resource_packs": [
+        "faithful-32x"
+      ]
+    },
+    "convoy-force-training": {
+      "mods": [
+        "starwcraft",
+        "kyber",
+        "shipyard",
+        "director",
+        "convoy-space",
+        "convoy-gear",
+        "epic-fight",
+        "thaumaturge",
+        "lithostitched",
+        "convoy-research",
+        "convoy-force-training"
+      ],
+      "overrides": [
+        "starwcraft-engineering",
+        "convoy",
+        "convoy-combat",
+        "convoy-research"
       ],
       "resource_packs": [
         "faithful-32x"

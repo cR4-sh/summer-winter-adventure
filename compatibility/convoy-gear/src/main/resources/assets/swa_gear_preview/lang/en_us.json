@@ -1,0 +1,10 @@
+{
+  "subtitles.swa_gear_preview.blaster_impact": "Blaster bolt hits",
+  "key.swa_gear_preview.toggle_saber": "Toggle lightsaber",
+  "swa_gear_preview.saber.guarding": "Guard",
+  "swa_gear_preview.saber.needs_blade": "%s to ignite the blade",
+  "swa_gear_preview.saber.needs_battle": "%s to enter battle mode",
+  "swa_gear_preview.saber.release_guard": "Release guard first",
+  "swa_gear_preview.saber.ignited": "Blade ignited",
+  "swa_gear_preview.saber.extinguished": "Blade extinguished"
+}

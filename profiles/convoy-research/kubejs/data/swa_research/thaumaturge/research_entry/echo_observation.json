@@ -1,0 +1,11 @@
+{
+  "category": "swa_research:force_practices",
+  "name": "research.swa_research.echo_observation.title",
+  "column": 0,
+  "row": 0,
+  "meta": ["round"],
+  "icons": ["minecraft:spyglass"],
+  "stages": [
+    {"text": "research.swa_research.echo_observation.stage_0"}
+  ]
+}

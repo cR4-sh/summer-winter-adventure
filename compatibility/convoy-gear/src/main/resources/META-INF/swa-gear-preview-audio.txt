@@ -1,0 +1,4 @@
+wire_blaster.ogg uses “enhanced blaster.wav” by MikeE63.
+https://freesound.org/people/MikeE63/sounds/466834/
+CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/
+Converted to mono Vorbis, with the tail trimmed for repeated fire.
