@@ -101,13 +101,14 @@
       "sha256": "5521273ad589556a079f1a952cccad0c7ac466e1c7785e50896bf891626cd874"
     },
     "convoy-space": {
-      "file": "swa-space-1.2.1.jar",
-      "path": "compatibility/convoy-space/dist/swa-space-1.2.1.jar",
-      "sha256": "edbc94bc0f89cb5de87acb3b62229e35d69d5557a57380f5b2d5b50787ada594",
+      "file": "swa-space-1.2.2.jar",
+      "path": "compatibility/convoy-space/dist/swa-space-1.2.2.jar",
+      "sha256": "31f279c09826d688df23f042a17a878fa5b375aeabd7ca3b3d11e8e89ade9552",
       "replaces": {
         "swa-space-1.0.0.jar": "7a3b0cd8a62e031d8d096024bbbeb45d0c2f2da4853367a1895b2b3c7914dab9",
         "swa-space-1.1.0.jar": "547a86fba90526296d6c158e87ecca38ac653d02df4a23c531ce80db8ae283e4",
-        "swa-space-1.2.0.jar": "2475bd6a42314dba644781764efe76d730eb526502cb4add8f3c60bd595f93b3"
+        "swa-space-1.2.0.jar": "2475bd6a42314dba644781764efe76d730eb526502cb4add8f3c60bd595f93b3",
+        "swa-space-1.2.1.jar": "edbc94bc0f89cb5de87acb3b62229e35d69d5557a57380f5b2d5b50787ada594"
       }
     },
     "blood-beskar": {

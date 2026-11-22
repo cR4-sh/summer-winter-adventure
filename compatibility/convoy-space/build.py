@@ -17,7 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 PACK = ROOT.parents[1]
-ARTIFACT = ROOT / "dist" / "swa-space-1.2.1.jar"
+ARTIFACT = ROOT / "dist" / "swa-space-1.2.2.jar"
 
 
 def png_chunk(kind, data):

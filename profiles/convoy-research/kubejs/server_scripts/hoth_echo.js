@@ -165,7 +165,10 @@ function ensureEchoSite(server, state) {
   }
   const site = state.getCompound('site')
   if (site.getInt('siteVersion') !== echoVersion || String(site.getString('dimension')) !== echoWorld) return null
-  if (site.getBoolean('ready')) return site
+  if (site.getBoolean('ready')) {
+    ensureEchoLanding(server, site)
+    return site
+  }
   const pos = echoPosition(site)
   const x = pos.getX(), y = pos.getY(), z = pos.getZ()
   for (let cx = (x - 12) >> 4; cx <= (x + 12) >> 4; cx++) {
@@ -184,7 +187,24 @@ function ensureEchoSite(server, state) {
     server.runCommandSilent(prefix + (z + 11) + ' ' + x + ' ' + y + ' ' + (z + 11) + ' minecraft:ladder[facing=south] replace minecraft:air')
   }
   site.putBoolean('ready', true)
+  ensureEchoLanding(server, site)
   return site
+}
+
+function ensureEchoLanding(server, site) {
+  if (site.getBoolean('landing_ready')) return
+  const pos = echoPosition(site)
+  const level = echoLevel(server, echoWorld)
+  if (level === null) return
+  const x = pos.getX(), z = pos.getZ()
+  for (let cx = (x - 8) >> 4; cx <= (x + 8) >> 4; cx++) {
+    for (let cz = (z - 9) >> 4; cz <= (z + 8) >> 4; cz++) level.getChunk(cx, cz)
+  }
+  const command = 'execute in ' + echoWorld + ' positioned ' +
+    pos.getX() + ' ' + pos.getY() + ' ' + pos.getZ() + ' run function swa_research:hoth/landing_pad'
+  server.runCommandSilent(command)
+  const beacon = ConvoyLandingBeacons.of(level).get(pos.offset(0, 6, -7))
+  if (beacon !== null && String(beacon.keeper()) === 'SWA Hoth Relay') site.putBoolean('landing_ready', true)
 }
 
 function useEchoDispatch(player, state, team) {
@@ -256,7 +276,12 @@ function useEchoPanel(player, entry, action) {
   }
 }
 
-ServerEvents.loaded(event => prepareEchoDispatch(event.server, echoState(event.server)))
+ServerEvents.loaded(event => {
+  const state = echoState(event.server)
+  prepareEchoDispatch(event.server, state)
+  const site = state.getCompound('site')
+  if (site.getBoolean('ready')) ensureEchoLanding(event.server, site)
+})
 
 PlayerEvents.loggedIn(event => {
   const player = event.player

@@ -8,7 +8,7 @@
   "research.swa_research.psychometry.stage_2": "Read the tag. If a different material also gives an echo, the evidence contradicts the theory about the glove's material. Revise a failed prediction and test again. Once verified, complete the entry and try the buckle by the loading ramp.",
   "message.swa_research.dispatch_locked": "Dispatch: Complete Change the Callsign before picking up the Hoth recording.",
   "message.swa_research.site_unavailable": "Dispatch: The Hoth station has not responded. Request its coordinates again.",
-  "message.swa_research.briefing": "Dispatch: Someone used our old callsign to request a landing corridor on Hoth. Fly to Hoth at X %s, Y %s, Z %s. Find the evacuation diagram and emergency recorder at the station, locate the shelter, then report back here.",
+  "message.swa_research.briefing": "Dispatch: Someone used our old callsign to request a landing corridor on Hoth. Select Hoth and the ‘Пункт связи на Хоте’ beacon on the Unbound map. The station is at X %s, Y %s, Z %s. Find the evacuation diagram, emergency recorder, and shelter, then report back here.",
   "message.swa_research.coordinates": "Hoth signal station coordinates. X %s, Y %s, Z %s.",
   "message.swa_research.briefing_required": "Pick up the landing request recording from dispatch on Tatooine first.",
   "message.swa_research.recorder_off": "The recorder has no power. Connect the backup circuit at the next console.",
